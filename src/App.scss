@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app-container {
+  .add-new {
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .import-export {
+      display: flex;
+      gap: 10px;
+      padding: 0 2px;
+      .import {
+        color: white;
+      }
+      i {
+        color: white;
+      }
+    }
+  }
+  .sort-header {
+    display: flex;
+    justify-content: space-between;
+    span {
+      i {
+        cursor: pointer;
+        padding: 0 2px;
+      }
+    }
+  }
+  img {
+    animation: logo-img-spin infinite 15s linear;
+    @keyframes logo-img-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .login-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .text {
+      font-size: 15px;
+      font-weight: 500;
+      // padding-bottom: 2px;
+    }
+    input {
+      outline: none;
+      border: 1px solid #eee;
+      padding: 10px 12px;
+      border-radius: 2px;
+      margin-top: 10px;
+      background-color: #f1f1f2;
+      width: 100%;
+    }
+    .input-icon {
+      position: relative;
+      i {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        cursor: pointer;
+      }
+    }
+    button {
+      border: 1px solid #eee;
+      outline: none;
+      margin-top: 20px;
+      background-color: #eee;
+      padding: 10px 12px;
+      background-color: #f1f1f2;
+      &.active {
+        background-color: #fe2c55;
+        color: #fff;
+      }
+    }
+    button[disabled='disabled'],
+    button:disabled {
+      cursor: not-allowed;
+    }
+    .back {
+      margin-top: 10px;
+      background-color: transparent;
+      padding: 10px 12px;
+
+      cursor: pointer;
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  // .modal-content {
+  //   width: 65% !important;
+  // }
+}
+.pagination {
+  justify-content: center;
+}
